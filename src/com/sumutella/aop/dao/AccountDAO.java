@@ -17,6 +17,11 @@ public class AccountDAO {
         System.out.println(getClass() + " DOING MY DB WORK: ADDING AN ACCOUNT with parameter");
     }
 
+    public void addAccount(AccountDAO accountDAO, boolean vipFlag){
+        System.out.println(getClass() + " DOING MY DB WORK: ADDING AN ACCOUNT with parameters AccountDao, boolean");
+    }
+
+
     public int accountRegistryYear(){
         return  2011;
     }

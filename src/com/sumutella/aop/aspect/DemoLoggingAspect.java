@@ -14,25 +14,25 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class DemoLoggingAspect {
 
-    @Before("execution(public void com.sumutella.aop.dao.AccountDAO.addAccount())")  //point cut expression
-    public void beforeAddAccountAdviceAccDAO(){
-        System.out.println("Executing @Before advice on addAccount()");
-    }
-
-    @Before("execution(int *())")  //point cut expression
-    public void beforeAddAccountAdviceMemDAO(){
-        System.out.println("Executing @Before advice on a method with zero paramater that  returns integer");
-    }
-
-    @Before("execution(public void add*(com.sumutella.aop.*.AccountDAO))")
-    public void beforeAddAccountWithAccDaoParam(){
-        System.out.println("Executing @Before advice on addAccount(AccountDAO parameter)");
-    }
-
-    @Before("execution(* add*(com.sumutella.aop.dao.MembershipDAO, *))")
-    public void beforeAddAccountWithMoreThanOneParam(){
-        System.out.println("Executing @Before advice on addAccount(AccountDAO parameter)");
-    }
+//    @Before("execution(public void com.sumutella.aop.dao.AccountDAO.addAccount())")  //point cut expression
+//    public void beforeAddAccountAdviceAccDAO(){
+//        System.out.println("Executing @Before advice on addAccount()");
+//    }
+//
+//    @Before("execution(int *())")  //point cut expression
+//    public void beforeAddAccountAdviceMemDAO(){
+//        System.out.println("Executing @Before advice on a method with zero paramater that  returns integer");
+//    }
+//
+//    @Before("execution(public void add*(com.sumutella.aop.*.AccountDAO))")
+//    public void beforeAddAccountWithAccDaoParam(){
+//        System.out.println("Executing @Before advice on addAccount(AccountDAO parameter)");
+//    }
+//
+//    @Before("execution(* add*(com.sumutella.aop.dao.MembershipDAO, *))")
+//    public void beforeAddAccountWithMoreThanOneParam(){
+//        System.out.println("Executing @Before advice on addAccount(AccountDAO parameter)");
+//    }
 
 
 

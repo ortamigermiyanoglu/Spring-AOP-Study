@@ -27,6 +27,7 @@ public class SpringAOPDemo {
 //        System.out.println("Number of members is " + membershipDAO.numberOfMembers());
 
         accountDao.addAccount(new AccountDAO());
+        System.out.println();
         membershipDAO.addAccount(new MembershipDAO(), 2015 );
 
         annotationConfigApplicationContext.close();

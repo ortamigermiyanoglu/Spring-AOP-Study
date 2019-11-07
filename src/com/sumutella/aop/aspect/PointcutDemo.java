@@ -14,15 +14,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class PointcutDemo {
 
-    @Pointcut("execution(* com.sumutella.aop.dao.*.*(..))")
-    private void forDaoPackage(){
-
-    }
-
-    @Before("forDaoPackage()")
-    public void beforeAddAccountAdvice(){
-        System.out.println("Executing @Before advice on method with point cut");
-    }
+//    @Pointcut("execution(* com.sumutella.aop.dao.*.*(..))")
+//    private void forDaoPackage(){
+//
+//    }
+//
+//    @Before("forDaoPackage()")
+//    public void beforeAddAccountAdvice(){
+//        System.out.println("Executing @Before advice on method with point cut");
+//    }
 
 
 

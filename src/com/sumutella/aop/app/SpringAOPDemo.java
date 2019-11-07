@@ -26,9 +26,19 @@ public class SpringAOPDemo {
 //        System.out.println("Account regisration year is "+ accountDao.accountRegistryYear());
 //        System.out.println("Number of members is " + membershipDAO.numberOfMembers());
 
-        accountDao.addAccount(new AccountDAO());
+//        accountDao.addAccount(new AccountDAO());
+//        System.out.println();
+//        membershipDAO.addAccount(new MembershipDAO(), 2015 );
+
+//        accountDao.setOwnerName("test testoglu");
+//        membershipDAO.setMembershipType("premium");
+
         System.out.println();
-        membershipDAO.addAccount(new MembershipDAO(), 2015 );
+
+        accountDao.getOwnerName();
+        membershipDAO.getMembershipType();
+
+
 
         annotationConfigApplicationContext.close();
 

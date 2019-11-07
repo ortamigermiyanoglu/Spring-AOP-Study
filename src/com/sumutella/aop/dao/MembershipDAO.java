@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class MembershipDAO {
+    private String membershipType;
 
     public void  addAccount(){
         System.out.println(getClass() + " : DOING STUFF: ADDING A MEMBERSHIP ACCOUNT");
@@ -22,4 +23,11 @@ public class MembershipDAO {
         return 108;
     }
 
+    public String getMembershipType() {
+        return membershipType;
+    }
+
+    public void setMembershipType(String membershipType) {
+        this.membershipType = membershipType;
+    }
 }

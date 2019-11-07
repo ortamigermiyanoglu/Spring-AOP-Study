@@ -9,6 +9,8 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class AccountDAO {
+    private String ownerName;
+
     public void addAccount(){
         System.out.println(getClass() + " DOING MY DB WORK: ADDING AN ACCOUNT");
     }
@@ -26,4 +28,11 @@ public class AccountDAO {
         return  2011;
     }
 
+    public String getOwnerName() {
+        return ownerName;
+    }
+
+    public void setOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+    }
 }

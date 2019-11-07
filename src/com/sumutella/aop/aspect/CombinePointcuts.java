@@ -28,6 +28,10 @@ public class CombinePointcuts {
     @Pointcut("forDaoPackage() && setter()")
     private void forSettersInDaoPackage(){}
 
+    @Pointcut("forDaoPackage() && setter() || getter()")
+    private void forSettersOrGettersInDaoPackage(){}
+
+
     @Before("forSettersInDaoPackage()")
     public void beforeSetterAdvice(){
         System.out.println("Executing @Before setter by combining point cuts");
@@ -38,5 +42,9 @@ public class CombinePointcuts {
         System.out.println("Executing @Before getter by combining point cuts");
     }
 
+    @Before("forGettersInDaoPackage()")
+    public void beforeGetterOrSetterAdvice(){
+        System.out.println("Executing @Before getter by combining point cuts");
+    }
 
 }

@@ -1,7 +1,8 @@
 package com.sumutella.aop.app;
 
 import com.sumutella.aop.configuration.SpringAOPDemoConfig;
-import com.sumutella.aop.dao.AccountDao;
+import com.sumutella.aop.dao.AccountDAO;
+import com.sumutella.aop.dao.MembershipDAO;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -16,9 +17,17 @@ public class SpringAOPDemo {
         //read the spring config java class
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(SpringAOPDemoConfig.class);
 
-        AccountDao accountDao = annotationConfigApplicationContext.getBean("accountDao", AccountDao.class);
+        AccountDAO accountDao = annotationConfigApplicationContext.getBean("accountDAO", AccountDAO.class);
+        MembershipDAO membershipDAO = annotationConfigApplicationContext.getBean("membershipDAO", MembershipDAO.class);
 
-        accountDao.addAccount();
+//        accountDao.addAccount();
+//        membershipDAO.addAccount();
+
+//        System.out.println("Account regisration year is "+ accountDao.accountRegistryYear());
+//        System.out.println("Number of members is " + membershipDAO.numberOfMembers());
+
+        accountDao.addAccount(new AccountDAO());
+        membershipDAO.addAccount(new MembershipDAO(), 2015 );
 
         annotationConfigApplicationContext.close();
 

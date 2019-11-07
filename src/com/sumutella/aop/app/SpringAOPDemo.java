@@ -33,11 +33,13 @@ public class SpringAOPDemo {
 //        accountDao.setOwnerName("test testoglu");
 //        membershipDAO.setMembershipType("premium");
 
+        accountDao.addAccount(new AccountDAO());
+
+
         System.out.println();
 
-        accountDao.getOwnerName();
-        membershipDAO.getMembershipType();
 
+        membershipDAO.createMembership("premium", 100);
 
 
         annotationConfigApplicationContext.close();

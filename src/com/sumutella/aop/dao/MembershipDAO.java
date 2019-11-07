@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class MembershipDAO {
     private String membershipType;
+    private int membershipPrice;
 
     public void  addAccount(){
         System.out.println(getClass() + " : DOING STUFF: ADDING A MEMBERSHIP ACCOUNT");
@@ -29,5 +30,33 @@ public class MembershipDAO {
 
     public void setMembershipType(String membershipType) {
         this.membershipType = membershipType;
+    }
+
+    public int getMembershipPrice() {
+        return membershipPrice;
+    }
+
+    public void setMembershipPrice(int membershipPrice) {
+        this.membershipPrice = membershipPrice;
+    }
+
+    public MembershipDAO() {
+    }
+
+    public MembershipDAO(String membershipType, int membershipPrice) {
+        this.membershipType = membershipType;
+        this.membershipPrice = membershipPrice;
+    }
+
+    public void createMembership(String membershipType, int membershipPrice){
+        new MembershipDAO(membershipType, membershipPrice);
+    }
+
+    @Override
+    public String toString() {
+        return "MembershipDAO{" +
+                "membershipType='" + membershipType + '\'' +
+                ", membershipPrice=" + membershipPrice +
+                '}';
     }
 }
